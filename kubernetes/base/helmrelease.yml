@@ -1,0 +1,18 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: my-app-dev
+  namespace: dev
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: .                    # Path to the chart in the Git repo
+      sourceRef:
+        kind: GitRepository
+        name: helm-package-manager         # Matches the default Git repo created by bootstrap
+        namespace: dev
+  valuesFrom:
+    - kind: ConfigMap
+      name: dev-values-configmap  # ConfigMap holding values.yml
+      valuesKey: values.yml

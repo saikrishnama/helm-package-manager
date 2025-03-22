@@ -1,0 +1,15 @@
+# values/dev/values.yml
+global:
+  environment: dev
+
+redis:
+  enabled: true
+  architecture: standalone
+  auth:
+    password: "dev-redis-pass"
+
+postgresql:
+  enabled: true
+  auth:
+    username: dev-user
+    password: "dev-postgres-pass"
