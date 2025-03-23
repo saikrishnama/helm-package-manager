@@ -8,6 +8,7 @@ spec:
   chart:
     spec:
       chart: .
+      version: 1.0.1
       sourceRef:
         kind: GitRepository
         name: helm-package-manager
