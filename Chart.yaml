@@ -1,6 +1,6 @@
 apiVersion: v2
 name: my-app
-version: 1.0.0
+version: 1.0.1
 dependencies:
   - name: redis
     version: 20.11.3  # Updated to a valid version for HTTPS
