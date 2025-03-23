@@ -7,9 +7,9 @@ redis:
   architecture: standalone
   auth:
     password: "dev-redis-pass"
-  replica:
-    replicaCount: 3
-
+  # replica:
+  #   replicaCount: 3
+  replicaCount: 3
 postgresql:
   enabled: true
   auth:
