@@ -3,3 +3,5 @@ kind: Kustomization
 namespace: dev
 resources:
   - helmrelease.yml
+  - repository.yml
+  - helmrepository.yml  # Add this line

@@ -6,17 +6,6 @@ resources:
 configMapGenerator:
   - name: dev-values-configmap
     files:
-      - values.yml 
-
-# Patch the HelmRelease to use the ConfigMap
-patches:
-  - target:
-      kind: HelmRelease
-      name: my-app
-    patch: |-
-      - op: add
-        path: /spec/valuesFrom
-        value:
-          - kind: ConfigMap
-            name: dev-values-configmap
-            valuesKey: values.yml
+      - values.yml  # Adjust path as needed
+    options:
+      disableNameSuffixHash: true  # Prevent hash suffix

@@ -7,12 +7,12 @@ spec:
   interval: 5m
   chart:
     spec:
-      chart: .                    # Path to the chart in the Git repo
+      chart: .
       sourceRef:
         kind: GitRepository
-        name: helm-package-manager         # Matches the default Git repo created by bootstrap
+        name: helm-package-manager
         namespace: dev
   valuesFrom:
     - kind: ConfigMap
-      name: dev-values-configmap  # ConfigMap holding values.yml
-      valuesKey: values.yml
+      name: dev-values-configmap
+      valuesKey: values.yml  # Only one line here
