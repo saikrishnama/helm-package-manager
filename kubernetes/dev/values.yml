@@ -1,12 +1,12 @@
 # values/dev/values.yml
-global:
+\global\:
   environment: dev
 
 nginx:
   enabled: true
   autoscaling:
     enabled: true 
-    minReplicas: 1
+    minReplicas: 6
     maxReplicas: 10
     targetCPU: 50
     targetMemory: 80
