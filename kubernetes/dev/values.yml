@@ -6,7 +6,7 @@ nginx:
   enabled: true
   autoscaling:
     enabled: true 
-    minReplicas: 10
+    minReplicas: 1
     maxReplicas: 10
     targetCPU: 50
     targetMemory: 80
