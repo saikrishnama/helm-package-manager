@@ -3,10 +3,10 @@ name: my-app
 version: 1.0.0
 dependencies:
   - name: redis
-    version: 17.3.5  # Updated to a valid version for HTTPS
+    version: 20.11.3  # Updated to a valid version for HTTPS
     repository: https://charts.bitnami.com/bitnami  # Switched to HTTPS
     condition: redis.enabled
   - name: postgresql
-    version: 13.3.0  # Updated to a valid version for HTTPS
+    version: 16.5.5  # Updated to a valid version for HTTPS
     repository: https://charts.bitnami.com/bitnami  # Switched to HTTPS
     condition: postgresql.enabled
