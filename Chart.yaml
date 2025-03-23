@@ -2,11 +2,11 @@ apiVersion: v2
 name: my-app
 version: 1.0.1
 dependencies:
-  - name: redis
-    version: 20.11.3  # Updated to a valid version for HTTPS
+  - name: nginx
+    version: 19.0.2  # Updated to a valid version for HTTPS
     repository: https://charts.bitnami.com/bitnami  # Switched to HTTPS
-    condition: redis.enabled
-  - name: postgresql
-    version: 16.5.5  # Updated to a valid version for HTTPS
-    repository: https://charts.bitnami.com/bitnami  # Switched to HTTPS
-    condition: postgresql.enabled
+    condition: nginx.enabled
+  # - name: postgresql
+  #   version: 16.5.5  # Updated to a valid version for HTTPS
+  #   repository: https://charts.bitnami.com/bitnami  # Switched to HTTPS
+  #   condition: postgresql.enabled

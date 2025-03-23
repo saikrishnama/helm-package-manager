@@ -2,16 +2,22 @@
 global:
   environment: dev
 
-redis:
+nginx:
   enabled: true
-  architecture: standalone
-  auth:
-    password: "dev-redis-pass"
-  replica:
-    kind: StatefulSet
-    replicaCount: 3
-postgresql:
-  enabled: true
-  auth:
-    username: dev-user
-    password: "dev-postgres-pass"
+  autoscaling:
+    enabled: true 
+    minReplicas: 5
+    maxReplicas: 10
+    targetCPU: 50
+    targetMemory: 80
+#   architecture: standalone
+#   auth:
+#     password: "dev-redis-pass"
+#   replica:
+#     kind: StatefulSet
+#     replicaCount: 3
+# postgresql:
+#   enabled: true
+#   auth:
+#     username: dev-user
+#     password: "dev-postgres-pass"
